@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="mode" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="src/index.js" defer></script>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <title>FocusTimer 2.0</title>
+</head>
+<body>
+    <main id="app">
+        <header>
+            <h1>
+                <span>Focus</span>Timer
+            </h1>
+            <div class="mode">
+                <button id="dark" class="">
+                    <i class="ph ph-moon"></i>
+                    <p class="sr-only">Ativar Dark Mode.</p>
+                </button>
+                <button id="light" class="hidden">
+                    <i class="ph ph-sun"></i>
+                    <p class="sr-only">Ativar Light Mode.</p>
+                </button>
+            </div>
+        </header>
+        <div id="container">
+            <section class="timer">
+                <input id="time" type="text" value="25:00">
+                <div class="timer-controls">
+                    <button id="play" data-action="togglePlay" class="input-control visible">
+                        <i class="ph ph-play-circle"></i>
+                        <p class="sr-only">Iniciar contagem.</p>
+                    </button>
+                    <button id="pause" data-action="togglePause" class="input-control hidden">
+                        <i class="ph ph-pause-circle"></i>
+                        <p class="sr-only">Pausar contagem.</p>
+                    </button>
+                    <button id="timer" data-action="timer" class="input-control visible">
+                        <i class="ph ph-timer"></i>
+                        <p class="sr-only">Escolher tempo.</p>
+                    </button>
+                    <button id="stop" data-action="stop" class="input-control hidden">
+                        <i class="ph ph-stop-circle"></i>
+                        <p class="sr-only">Parar tempo.</p>
+                    </button>
+                    <button id="sound-active" data-action="toggleActive" class="input-control hidden">
+                        <i class="ph ph-speaker-high"></i>
+                        <p class="sr-only">Ativar audio.</p>
+                    </button>
+                    <button id="sound-disable" data-action="toggleDisable" class="input-control visible">
+                        <i class="ph ph-speaker-x"></i>
+                        <p class="sr-only">Desativar audio.</p>
+                    </button>
+                    <button id="plus" data-action="plus" class="input-control">
+                        <i class="ph ph-plus-circle"></i>
+                        <p class="sr-only">Aumentar o tempo.</p>
+                    </button>
+                    <button id="minus" data-action="minus" class="input-control">
+                        <i class="ph ph-minus-circle"></i>
+                        <p class="sr-only">Aumentar o tempo.</p>
+                    </button>
+                </div>
+            </section>
+
+            <section id="audio">
+                <button id="forest" class="audio-control active">
+                    <i class="ph ph-tree"></i>
+                </button>
+                <button id="rain" class="audio-control">
+                    <i class="ph ph-cloud-rain"></i>
+                </button>
+                <button id="coffeeplace" class="audio-control">
+                    <i class="ph ph-coffee"></i>
+                </button>
+                <button id="fireplace" class="audio-control">
+                    <i class="ph ph-campfire"></i>
+                </button>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
